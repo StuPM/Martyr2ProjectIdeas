@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+/**
+ * Created by StuartM on 30/12/2015.
+ */
+public class main {
+
+    public static void main(String[] Args) {
+
+        String inString, outString = "";
+        System.out.println("Please enter a word...");
+
+        Scanner in = new Scanner(System.in);
+        inString = in.nextLine();
+        in.close();
+
+        char reverseArray[] = inString.toCharArray();
+        String reversedString = "";
+
+        for (int n = reverseArray.length; n > 0; n--) {
+            reversedString += reverseArray[n - 1];
+        }
+
+        System.out.println("Reversed string: " + reversedString);
+
+        if (reversedString.equals(inString)) {
+            System.out.println("True - Is a Palindrome");
+        } else {
+            System.out.println("False - Is not a Palindrome");
+        }
+    }
+}
