@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+/**
+ * Created by StuartM on 30/12/2015.
+ */
+public class main {
+
+    public static void main(String[] Args) {
+
+        String inString, outString = "";
+        String[] inStringArray;
+        System.out.println("Please enter a word...");
+
+        Scanner in = new Scanner(System.in);
+        inStringArray = in.nextLine().split(" ");
+        in.close();
+
+        System.out.println(inStringArray.length);
+    }
+}
