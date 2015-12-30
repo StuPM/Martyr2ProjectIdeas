@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+/**
+ * Created by StuartM on 30/12/2015.
+ */
+public class main {
+
+    public static void main(String[] Args) {
+
+        String inString, outString = "";
+        System.out.println("Please enter the word, to count the number of vowels...");
+
+        Scanner in = new Scanner(System.in);
+        inString = in.nextLine();
+        in.close();
+
+        System.out.println("You input " + inString);
+
+        char checkArray[] = inString.toCharArray();
+        int vowelA = 0, vowelE = 0, vowelI = 0, vowelO = 0, vowelU = 0;
+        //a e i o u
+        for (int i = 0; i < checkArray.length; i++) {
+            if(checkArray[i] == 'a'){
+                vowelA++;
+            }
+            else if(checkArray[i] == 'e'){
+                vowelE++;
+            }
+            else if(checkArray[i] == 'i'){
+                vowelI++;
+            }
+            else if(checkArray[i] == 'o'){
+                vowelO++;
+            }
+            else if(checkArray[i] == 'u'){
+                vowelU++;
+            }
+        }
+
+        System.out.println("A " + vowelA + ", E " + vowelE + ", I " + vowelI + ", O " + vowelO + ", U " + vowelU);
+    }
+}
